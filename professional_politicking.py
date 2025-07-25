@@ -2,56 +2,23 @@ import random
 import time
 
 # if you are contributing, please don't actually make this terribly political
-# keep it semi-lighthearted but you can make some jokes here and there
+# keep it lighthearted but you can make some jokes here and there
 
-# list of nations to choose from
-nations = [
-    "Ducksia",
-    "Ducklandia"
-    "Simmonslandia",
-    "Terrancelandia",
-    "Harvardlandia",
-    "Tim",
-    "United States",
-    "Canada",
-    "Mexico",
-    "Greenland",
-    "Blueland",
-    "Redland",
-    "MIT"
-]
+nations = []
+parties = []
+platforms = []
 
-# list of parties to choose from
-parties = [
-    "Harvard",
-    "Tim the Beaver",
-    "Simmons",
-    "New Vassar",
-    "East Campus",
-    "People's",
-    "Green",
-    "Blue",
-    "Commonwealth",
-    "Soap Opera",
-    "Judicial",
-    "Executive",
-    "Legislative",
-    "Presidential",
-    "Massachusetts Institute of Politicians'"
-]
+with open("config/nations.txt", "r") as file:
+    for nation in file:
+        nations.append(nation.strip())
 
-# list of platform topics to choose from
-platforms = [
-    "Chair",
-    "Simmons",
-    "Harvard",
-    "Water",
-    "Couch",
-    "Paper",
-    "Tree",
-    "Oxygen",
-    "Dihydrogen monoxide"
-]
+with open("config/parties.txt", "r") as file:
+    for party in file:
+        parties.append(party.strip())
+
+with open("config/platforms.txt", "r") as file:
+    for platform in file:
+        platforms.append(platform.strip())
 
 ANSI_ESCAPE = {
     "YELLOW_BOLD": "\033[1;33m",
