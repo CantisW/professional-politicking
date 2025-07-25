@@ -57,3 +57,4 @@ Walking
 Running
 Exercise
 Sleeping
+Gravity

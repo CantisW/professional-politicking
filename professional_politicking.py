@@ -113,14 +113,14 @@ if __name__ == "__main__":
             print(f"{ANSI_ESCAPE["YELLOW_BOLD"]}{v}{ANSI_ESCAPE['RESET']}, you will be running for {ANSI_ESCAPE["YELLOW_BOLD"]}the {parties_indexed[randParty]} Party{ANSI_ESCAPE['RESET']}!")
 
             # pidgeonhole principle
-            if len(candidates) - (numOfParties - len(takenParties)) == 0:
+            if (len(candidates) - i) - (numOfParties - len(takenParties)) == 0:
                 parties_indexed.remove(parties_indexed[randParty])
 
 
 
     print("\n\n\nThe game will now be directed by the EVENT ORGANIZERS.")
 
-    programPause = input("Press any key to close...")
+    programPause = input("Press <ENTER> to close...")
     programPause = input("(one more time!)")
 
     
