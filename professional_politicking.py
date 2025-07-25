@@ -50,7 +50,7 @@ if __name__ == "__main__":
 
     while inputCandidates:
         inputted = input(f"Enter the name of candidate #{len(candidates)+1}: ")
-        if inputted == "DONE":
+        if inputted.lower() == "done":
             inputCandidates = False
             break
         candidates.append(inputted)
@@ -113,8 +113,9 @@ if __name__ == "__main__":
             print(f"{ANSI_ESCAPE["YELLOW_BOLD"]}{v}{ANSI_ESCAPE['RESET']}, you will be running for {ANSI_ESCAPE["YELLOW_BOLD"]}the {parties_indexed[randParty]} Party{ANSI_ESCAPE['RESET']}!")
 
             # pidgeonhole principle
-            if (len(candidates)-(i+1))-len(takenParties) == 0:
+            if len(candidates) - (numOfParties - len(takenParties)) == 0:
                 parties_indexed.remove(parties_indexed[randParty])
+
 
 
     print("\n\n\nThe game will now be directed by the EVENT ORGANIZERS.")
