@@ -39,7 +39,7 @@ if __name__ == "__main__":
           ''')
     
     # add yourself if you contribute pls
-    print("Contributors: Santiago Vega")
+    #print("Contributors: Santiago Vega")
 
     candidates = []
     inputCandidates = True
@@ -119,6 +119,9 @@ if __name__ == "__main__":
 
 
     print("\n\n\nThe game will now be directed by the EVENT ORGANIZERS.")
+
+    programPause = input("Press any key to close...")
+    programPause = input("(one more time!)")
 
     
 
